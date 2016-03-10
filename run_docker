@@ -1,1 +1,1 @@
-sudo docker run -d --name="home-assistant" --device /dev/ttyACM0:/dev/zwave -v /var/local/homeassistant/config:/config -v /etc/localtime:/etc/localtime:ro -v /tmp/hlog:/var/log --net=host hmarc/rpi-homeassistant
+sudo docker run -d --name="home-assistant" --device /dev/ttyACM0:/dev/zwave -v /var/local/homeassistant/config:/config -v /etc/localtime:/etc/localtime:ro -v /tmp/hlog:/var/log --net=host pithings/rpi-homeassistant

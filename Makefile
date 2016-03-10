@@ -1,5 +1,5 @@
 DOCKER_IMAGE_VERSION=0.14.2-1
-DOCKER_IMAGE_NAME=hmarc/rpi-homeassistant
+DOCKER_IMAGE_NAME=pithings/rpi-homeassistant
 DOCKER_IMAGE_TAGNAME=$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION)
 
 default: build
@@ -15,4 +15,4 @@ push:
 test:
 	mkdir -p /var/local/homeassistant/config
 	cp configuration.yaml /var/local/homeassistant/config
-	docker run -d --name="home-assistant" --device /dev/ttyACM0:/dev/zwave -v /var/local/homeassistant/config:/config -v /etc/localtime:/etc/localtime:ro --net=host hmarc/rpi-homeassistant
+	docker run -d --name="home-assistant" --device /dev/ttyACM0:/dev/zwave -v /var/local/homeassistant/config:/config -v /etc/localtime:/etc/localtime:ro --net=host pithings/rpi-homeassistant
