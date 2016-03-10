@@ -1,0 +1,37 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 38
+  longitude: -125
+  # C for Celcius, F for Fahrenheit
+  temperature_unit: F
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Los_Angeles
+
+http:
+  api_password: home
+
+# Enables the frontend
+frontend:
+
+discovery:
+
+# Checks for available updates
+updater:
+
+# View all events in a logbook
+logbook:
+
+# Allows you to issue voice commands from the frontend
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# Track the sun
+sun:
+
+zwave:
+  usb_path: /dev/zwave
+  config_path: /usr/local/share/python-openzwave/config
