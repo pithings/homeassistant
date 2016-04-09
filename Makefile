@@ -1,11 +1,11 @@
-DOCKER_IMAGE_VERSION=0.15-2
+DOCKER_IMAGE_VERSION=0.16.1-1
 DOCKER_IMAGE_NAME=pithings/rpi-homeassistant
 DOCKER_IMAGE_TAGNAME=$(DOCKER_IMAGE_NAME):$(DOCKER_IMAGE_VERSION)
 
 default: build
 
 build:
-	rm requirements_all.txt
+	rm -f requirements_all.txt
 	wget "https://raw.githubusercontent.com/balloob/home-assistant/master/requirements_all.txt"
 	docker build -t $(DOCKER_IMAGE_TAGNAME) .
 	docker tag  $(DOCKER_IMAGE_TAGNAME) $(DOCKER_IMAGE_NAME):latest

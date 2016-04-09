@@ -12,9 +12,11 @@ RUN apt-get update && \
 
 RUN pip3 install --upgrade pip setuptools
 
+RUN pip3 install certifi==2015.04.28
+
 COPY requirements_all.txt requirements_all.txt
 RUN pip3 install -r requirements_all.txt
 
-RUN pip3 install homeassistant
+RUN pip3 install homeassistant==0.16.1
 
 CMD ["hass", "--open-ui", "--config", "/config"]
